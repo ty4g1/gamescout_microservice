@@ -4,7 +4,7 @@ from app.services.vectorize import feature_vector
 
 app = FastAPI()
 
-@app.get("/vectorize")
+@app.post("/vectorize")
 async def create_item(data: Data):
     return {"vector": feature_vector(data).tolist()}
 
