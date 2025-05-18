@@ -11,6 +11,8 @@ services:
   server:
     build:
       context: .
+    volumes:
+      - ./app/word2vec/GoogleNews-vectors-negative300.bin:/app/app/word2vec/GoogleNews-vectors-negative300.bin
     ports:
       - 8000:8000
 
