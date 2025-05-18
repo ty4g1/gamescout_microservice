@@ -39,6 +39,9 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     python -m pip install -r requirements.txt
 RUN python -m spacy download en_core_web_sm
 
+RUN apt-get update
+RUN apt-get install -y curl
+
 # Switch to the non-privileged user to run the application.
 USER appuser
 
