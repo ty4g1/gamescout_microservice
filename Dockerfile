@@ -42,6 +42,8 @@ RUN python -m spacy download en_core_web_sm
 RUN apt-get update
 RUN apt-get install -y curl
 
+RUN mkdir -p /app/app/word2vec
+
 # Switch to the non-privileged user to run the application.
 USER appuser
 
