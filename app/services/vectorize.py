@@ -1,9 +1,7 @@
 from app.models.data import Data
 from sentence_transformers import SentenceTransformer
-import spacy
 import numpy as np
 
-nlp = spacy.load("en_core_web_sm")
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
 GENRES_WEIGHT = 0.4
